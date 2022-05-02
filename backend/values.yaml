@@ -39,17 +39,18 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: LoadBalancer
+  type: NodePort
   port: 80
   targetPort: 8000
   nodePort: 30011
   name: http
 
 ingress:
-  enabled: false
+  enabled: true
   className: ""
   annotations:
-    kubernetes.io/ingress.class: traefik
+    kubernetes.io/ingress.class: alb # the value we set in alb-ingress-controller
+    alb.ingress.kubernetes.io/scheme: internet-facing
     external-dns.alpha.kubernetes.io/hostname: backend.jmtmonster.com
     # kubernetes.io/tls-acme: "true"
   hosts:
