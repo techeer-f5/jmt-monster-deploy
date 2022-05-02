@@ -58,9 +58,9 @@ ingress:
         - path: /
           pathType: Prefix
           defaultBackend:
-            name: frontend
+            name: jmt-monster-frontend
             port:
-              name: http
+              number: 80
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

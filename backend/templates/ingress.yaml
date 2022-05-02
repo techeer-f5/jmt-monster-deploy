@@ -25,9 +25,9 @@ metadata:
 spec:
   defaultBackend:
     service:
-      name: backend
+      name: jmt-monster-backend
       port:
-        name: http
+        number: 80
   {{- if and .Values.ingress.className (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion) }}
   ingressClassName: {{ .Values.ingress.className }}
   {{- end }}
