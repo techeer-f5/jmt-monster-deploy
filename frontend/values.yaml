@@ -55,7 +55,7 @@ ingress:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
     alb.ingress.kubernetes.io/actions.redirect-to-https: >
       {"Type":"redirect","RedirectConfig":{"Port":"443","Protocol":"HTTPS","StatusCode":"HTTP_302"}}
-    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:ap-northeast-2:058718939924:certificate/c712ea06-884d-4217-bc33-067bb5e676d4"
+    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:ap-northeast-2:058718939924:certificate/43009e25-8ed0-4646-9deb-53b7741eeb2c"
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: frontend.jmtmonster.com
