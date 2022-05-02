@@ -58,7 +58,7 @@ ingress:
     alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:ap-northeast-2:058718939924:certificate/c712ea06-884d-4217-bc33-067bb5e676d4"
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: jmtmonster.com
+    - host: frontend.jmtmonster.com
       paths:
         - path: /
           pathType: Prefix
