@@ -6,7 +6,7 @@ metadata:
   # Otherwise, you may safely omit it.
   annotations:
     # Substitute your account ID and IAM service role name below.
-    eks.amazonaws.com/role-arn: arn:aws:iam::058718939924:policy/AllowExternalDNSUpdates
+    eks.amazonaws.com/role-arn: arn:aws:iam::058718939924:role/aws-service-role/eks.amazonaws.com/AWSServiceRoleForAmazonEKS
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
