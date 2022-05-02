@@ -56,7 +56,7 @@ spec:
       - name: external-dns
         image: k8s.gcr.io/external-dns/external-dns:v0.10.2
         args:
-        - --source=service
+        # - --source=service
         - --source=ingress
         # - --domain-filter=backend.jmtmonster.com # will make ExternalDNS see only the hosted zones matching provided domain, omit to process all available hosted zones
         - --log-level=debug
