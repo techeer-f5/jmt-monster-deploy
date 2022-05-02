@@ -56,15 +56,15 @@ spec:
       - name: external-dns
         image: k8s.gcr.io/external-dns/external-dns:v0.10.2
         args:
-        - --source=service
+        # - --source=service
         - --source=ingress
         # - --domain-filter=backend.jmtmonster.com # will make ExternalDNS see only the hosted zones matching provided domain, omit to process all available hosted zones
         - --log-level=debug
         - --provider=aws
         - --policy=sync
         - --aws-zone-type=public # only look at public hosted zones (valid values are public, private or no value for both)
-        - --registry=txt
-        - --txt-prefix=prefix
-        - --txt-owner-id=/hostedzone/Z0216604U80P8I51ON1B
+        # - --registry=txt
+        # - --txt-prefix=prefix
+        # - --txt-owner-id=/hostedzone/Z0216604U80P8I51ON1B
       securityContext:
         fsGroup: 65534 # For ExternalDNS to be able to read Kubernetes and AWS token files
