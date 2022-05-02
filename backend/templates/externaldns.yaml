@@ -59,6 +59,7 @@ spec:
         - --source=service
         - --source=ingress
         # - --domain-filter=backend.jmtmonster.com # will make ExternalDNS see only the hosted zones matching provided domain, omit to process all available hosted zones
+        - --log-level=debug
         - --provider=aws
         - --policy=sync
         - --aws-zone-type=public # only look at public hosted zones (valid values are public, private or no value for both)
