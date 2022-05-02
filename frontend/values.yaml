@@ -56,7 +56,7 @@ ingress:
       paths:
         - path: /
           pathType: Prefix
-          backend:
+          defaultBackend:
             name: frontend
             port:
               name: http
