@@ -48,9 +48,8 @@ ingress:
   enabled: true
   className: ""
   annotations:
-    kubernetes.io/ingress.class: nginx
-    kubernetes.io/ingress.class: alb # the value we set in alb-ingress-controller
-    alb.ingress.kubernetes.io/scheme: internet-facing
+    kubernetes.io/ingress.class: traefik
+    external-dns.alpha.kubernetes.io/target: backend.jmtmonster.com
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: backend.jmtmonster.com
