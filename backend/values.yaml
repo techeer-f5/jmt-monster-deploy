@@ -49,7 +49,6 @@ ingress:
   enabled: true
   className: "alb"
   annotations:
-    kubernetes.io/ingress.class: alb # the value we set in alb-ingress-controller
     alb.ingress.kubernetes.io/scheme: internet-facing
     external-dns.alpha.kubernetes.io/hostname: backend.jmtmonster.com
     alb.ingress.kubernetes.io/healthcheck-protocol: HTTPS
