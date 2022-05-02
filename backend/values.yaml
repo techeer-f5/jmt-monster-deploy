@@ -56,11 +56,16 @@ ingress:
       paths:
         - path: /
           pathType: Prefix
-          defaultBackend:
+          backend:
             service:
-            name: backend
-            port:
-              name: http
+              name: backend
+              port:
+                name: http
+  defaultBackend:
+    service:
+      name: backend
+      port:
+        name: http
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
