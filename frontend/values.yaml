@@ -58,7 +58,7 @@ ingress:
       paths:
         - path: /
           pathType: Prefix
-          defaultBackend:
+          backend:
             name: jmt-monster-frontend
             port:
               number: 80
