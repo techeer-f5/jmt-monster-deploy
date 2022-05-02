@@ -4,10 +4,6 @@ metadata:
   name: {{ include "backend.fullname" . }}
   labels:
     {{- include "backend.labels" . | nindent 4 }}
-  annotations:
-    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
-    external-dns.alpha.kubernetes.io/hostname: backend.jmtmonster.com
-    external-dns.alpha.kubernetes.io/ttl: "60"
 spec:
   type: {{ .Values.service.type }}
   ports:
