@@ -64,6 +64,7 @@ spec:
         - --policy=sync
         - --aws-zone-type=public # only look at public hosted zones (valid values are public, private or no value for both)
         - --registry=txt
+        - --txt-prefix
         - --txt-owner-id=/hostedzone/Z0216604U80P8I51ON1B
       securityContext:
         fsGroup: 65534 # For ExternalDNS to be able to read Kubernetes and AWS token files
