@@ -25,7 +25,9 @@ serviceAccount:
   # If not set and create is true, a name is generated using the fullname template
   name: ""
 
-podAnnotations: {}
+podAnnotations:
+  argocd-image-updater.argoproj.io/image-list: backend=public.ecr.aws/w1d0u6d8/jmt-monster-backend
+  argocd-image-updater.argoproj.io/backend.update-strategy: latest
 
 podSecurityContext: {}
   # fsGroup: 2000
