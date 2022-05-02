@@ -50,6 +50,7 @@ ingress:
   annotations:
     kubernetes.io/ingress.class: traefik
     external-dns.alpha.kubernetes.io/target: backend.jmtmonster.com
+    external-dns.alpha.kubernetes.io/alias: "true"
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: backend.jmtmonster.com
