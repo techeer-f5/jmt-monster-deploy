@@ -61,8 +61,11 @@ ingress:
   hosts:
     - host: frontend.jmtmonster.com
       paths:
-        - path: /
-          pathType: Prefix
+        - path: /*
+          backend:
+            serviceName: ssl-redirect
+            servicePort: use-annotation
+        - path: /*
           backend:
             name: frontend
             port:
