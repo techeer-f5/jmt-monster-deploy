@@ -49,6 +49,7 @@ ingress:
   enabled: true
   className: "alb"
   annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::058718939924:role/eksctl-jmtmonster-cluster-ServiceRole-NXWYIP8LJYII
     alb.ingress.kubernetes.io/scheme: internet-facing
     external-dns.alpha.kubernetes.io/hostname: jmtmonster.com
     # alb.ingress.kubernetes.io/healthcheck-protocol: HTTPS
