@@ -47,7 +47,7 @@ service:
 
 ingress:
   enabled: true
-  className: "alb"
+  className: ""
   annotations:
     kubernetes.io/ingress.class: alb
     external-dns.alpha.kubernetes.io/hostname: backend.jmtmonster.com
