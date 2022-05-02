@@ -63,6 +63,7 @@ spec:
         - --provider=aws
         - --policy=sync
         - --aws-zone-type=public # only look at public hosted zones (valid values are public, private or no value for both)
+        - --aws-prefer-alias
         # - --aws-prefer-cname
         # - --registry=txt
         # - --txt-prefix=prefix
