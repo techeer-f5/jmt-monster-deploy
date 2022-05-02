@@ -61,11 +61,6 @@ ingress:
               name: backend
               port:
                 name: http
-  defaultBackend:
-    service:
-      name: backend
-      port:
-        name: http
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

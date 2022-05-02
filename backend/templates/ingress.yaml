@@ -23,10 +23,11 @@ metadata:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
-  {{- if .Values.ingress.defaultBackend }}
   defaultBackend:
-    {{ .Values.ingress.defaultBackend }}
-  {{- end }}
+    service:
+      name: backend
+      port:
+        name: http
   {{- if and .Values.ingress.className (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion) }}
   ingressClassName: {{ .Values.ingress.className }}
   {{- end }}
