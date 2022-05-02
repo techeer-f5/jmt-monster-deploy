@@ -39,6 +39,7 @@ securityContext: {}
 service:
   type: NodePort
   port: 80
+  targetPort: 3000
   name: http
 
 ingress:
@@ -53,7 +54,6 @@ ingress:
         - path: /
           pathType: Prefix
           backend:
-            service:
             name: frontend
             port:
               name: http
