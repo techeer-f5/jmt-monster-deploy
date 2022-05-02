@@ -52,7 +52,6 @@ ingress:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     external-dns.alpha.kubernetes.io/hostname: jmtmonster.com
-    external-dns.alpha.kubernetes.io/alias: "true"
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: jmtmonster.com
