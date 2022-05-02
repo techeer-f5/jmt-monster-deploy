@@ -4,9 +4,9 @@ metadata:
   name: external-dns
   # If you're using Amazon EKS with IAM Roles for Service Accounts, specify the following annotation.
   # Otherwise, you may safely omit it.
-  # annotations:
+  annotations:
     # Substitute your account ID and IAM service role name below.
-    # eks.amazonaws.com/role-arn: arn:aws:iam::058718939924:role/aws-service-role/eks.amazonaws.com/AWSServiceRoleForAmazonEKS
+    eks.amazonaws.com/role-arn: arn:aws:iam::058718939924:role/external-dns-role
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
