@@ -26,7 +26,7 @@ serviceAccount:
   name: ""
 
 podAnnotations:
-  argocd-image-updater.argoproj.io/image-list: frontend=public.ecr.aws/w1d0u6d8/jmt-monster-frontend
+  argocd-image-updater.argoproj.io/image-list: "frontend=public.ecr.aws/w1d0u6d8/jmt-monster-frontend"
   argocd-image-updater.argoproj.io/frontend.update-strategy: latest
 
 podSecurityContext: {}
