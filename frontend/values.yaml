@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: public.ecr.aws/w1d0u6d8/jmt-monster-frontend
+  repository: ghcr.io/techeer-f5/jmt-monster-frontend
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
