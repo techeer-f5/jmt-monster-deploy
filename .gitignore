@@ -1,2 +1,4 @@
 secrets.env
+route53-secrets.env
 secrets.json
+route53-secrets.json
