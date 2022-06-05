@@ -7,18 +7,12 @@ apiVersion: extensions/v1beta1
 {{- end }}
 kind: Ingress
 metadata:
-  {{- with .Values.ingress.annotations }}
-  annotations:
-    {{- toYaml . | nindent 4 }}
-  {{- end }}
   name: swagger-ui
 spec:
-  ingressClassName: alb
-  defaultBackend:
-    service:
-      name: swagger-ui
-      port:
-        number: 80
+  tls:
+  - hosts:
+    - swagger.jmtmonster.com
+    secretName: letsencrypt-account-key
   rules:
   - host: swagger.jmtmonster.com
     http:

@@ -7,18 +7,12 @@ apiVersion: extensions/v1beta1
 {{- end }}
 kind: Ingress
 metadata:
-  {{- with .Values.ingress.annotations }}
-  annotations:
-    {{- toYaml . | nindent 4 }}
-  {{- end }}
   name: grafana
 spec:
-  ingressClassName: alb
-  defaultBackend:
-    service:
-      name: loki-grafana
-      port:
-        number: 80
+  tls:
+  - hosts:
+    - grafana.jmtmonster.com
+    secretName: letsencrypt-account-key
   rules:
   - host: grafana.jmtmonster.com
     http:
