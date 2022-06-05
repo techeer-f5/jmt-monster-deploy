@@ -19,7 +19,7 @@ spec:
         route53:
           region: ap-northeast-2
           hostedZoneID: Z0216643560BWHQEHX7W
-          accessKeyID: AKIAQ3K7L5MKPWIWVZCA
+          accessKeyID: AKIAQ3K7L5MKGJN3ZFM7
           secretAccessKeySecretRef:
             name: application-secret
             key: route53-key
