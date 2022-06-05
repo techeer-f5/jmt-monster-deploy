@@ -44,7 +44,6 @@ service:
   type: NodePort
   port: 80
   targetPort: 3000
-  nodePort: 30012
   name: http
 
 ingress:
@@ -59,7 +58,7 @@ ingress:
     alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:ap-northeast-2:058718939924:certificate/43009e25-8ed0-4646-9deb-53b7741eeb2c"
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: frontend.jmtmonster.com
+    - host: jmtmonster.com
       paths:
         - path: /
           pathType: Prefix
