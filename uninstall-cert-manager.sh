@@ -1,1 +1,1 @@
-helm --namespace cert-manager delete cert-manager
+helm --namespace cert-manager delete backend
