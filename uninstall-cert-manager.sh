@@ -1,1 +1,1 @@
-helm --namespace cert-manager delete backend
+helm --namespace cert-manager delete my-release
