@@ -41,12 +41,14 @@ spec:
             httpGet:
               path: /api/v1/hello
               port: http
-            initialDelaySeconds: 240
+            initialDelaySeconds: 60
+            periodSeconds: 5
           readinessProbe:
             httpGet:
               path: /api/v1/hello
               port: http
-            initialDelaySeconds: 60
+            initialDelaySeconds: 5
+            periodSeconds: 5
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           envFrom:
