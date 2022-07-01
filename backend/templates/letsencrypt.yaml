@@ -23,6 +23,18 @@ spec:
           secretAccessKeySecretRef:
             name: route53-secrets
             key: route53-key
-      selector:
-        dnsZones:
-        - 'jmtmonster.com'
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wildcard-certificate
+  namespace: cert-manager
+spec:
+  secretName: letsencrypt-account-wildcard-key
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: '*.jmtmonster.com'
+  dnsNames:
+  - jmtmonster.com
+  - '*.jmtmonster.com'

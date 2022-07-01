@@ -12,7 +12,7 @@ spec:
   tls:
   - hosts:
     - swagger.jmtmonster.com
-    secretName: letsencrypt-account-key
+    secretName: letsencrypt-account-wildcard-key
   rules:
   - host: swagger.jmtmonster.com
     http:

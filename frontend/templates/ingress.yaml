@@ -10,7 +10,7 @@ spec:
   tls:
   - hosts:
     - jmtmonster.com
-    secretName: letsencrypt-account-key
+    secretName: letsencrypt-account-wildcard-key
   rules:
   - host: jmtmonster.com
     http:

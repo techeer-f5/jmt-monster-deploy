@@ -12,7 +12,7 @@ spec:
   tls:
   - hosts:
     - grafana.jmtmonster.com
-    secretName: letsencrypt-account-key
+    secretName: letsencrypt-account-wildcard-key
   rules:
   - host: grafana.jmtmonster.com
     http:
