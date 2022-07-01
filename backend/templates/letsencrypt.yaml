@@ -23,3 +23,6 @@ spec:
           secretAccessKeySecretRef:
             name: route53-secrets
             key: route53-key
+      selector:
+        dnsZones:
+        - 'jmtmonster.com'
